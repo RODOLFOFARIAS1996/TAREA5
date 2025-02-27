@@ -1,0 +1,265 @@
+/* Reset básico */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+/* ESTILOS PARA EL MENÚ DE NAVEGACIÓN */
+/* ENCABEZADO */
+/* CONTENEDOR DEL HEADER */
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 20px;
+    background: white;
+}
+
+/* ESTILO DEL LOGO */
+.logo img {
+    width: 140px; /* Ajusta el tamaño del logo según sea necesario */
+    display: block;
+    margin-bottom: 10px;
+}
+
+/* CONTENEDOR DEL MENÚ */
+nav {
+    max-width: 1200px;
+    margin: auto;
+}
+.linea_borde{
+    border-top: 3px solid #909090;
+}
+.border_derecha{
+border-right: 3px solid #909090;
+}
+/* LISTA DEL MENÚ */
+nav ul {
+
+    list-style: none;
+    display: flex;
+    justify-content: center;
+    padding: 0;
+    margin: 0;
+}
+
+/* ELEMENTOS DEL MENÚ */
+nav ul li {
+
+    flex: 1;
+
+    text-align: center;
+    
+}
+
+/* QUITAR BORDE DEL ÚLTIMO ELEMENTO */
+
+
+/* ENLACES DEL MENÚ */
+nav ul li a {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50px; /* Ajuste para que la altura sea uniforme */
+    text-decoration: none;
+    color: black;
+    font-size: 16px;
+    font-weight: normal; /* Corregido para quitar la negrita */
+    transition: background 0.3s ease;
+}
+
+/* EFECTO AL PASAR EL MOUSE */
+nav ul li a:hover {
+    background: black;
+    color: white;
+}
+
+
+
+
+/* Banner principal */
+.banner {
+    background: url('../img/foto_slide.jpg') no-repeat center/cover;
+    height: 350px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.banner-content h1 {
+    font-size: 36px;
+    background: rgba(0, 0, 0, 0.5); /* Negro semi-transparente */
+    color: white;
+    padding: 15px 30px;
+    border-radius: 5px;
+    font-weight: bold;
+    text-transform: uppercase;
+}
+
+
+/* Sección Más Popular */
+.popular {
+    background: rgb(182, 182, 182); /* Fondo negro */
+    padding: 40px 20px;
+    text-align: center;
+}
+.popular-title{
+    background-color: black;
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 15px;
+}
+.popular-title h2 {
+    color: white; /* Texto en color blanco */
+    font-size: 24px;
+    font-weight: bold;
+    
+    text-transform: uppercase;
+    
+}
+
+.popular-items {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px; /* Espaciado entre elementos */
+}
+/* ESTILO DE CADA ITEM */
+.item {
+    width: 250px;  /* Ancho fijo para evitar que las imágenes se desborden */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    padding: 20px;
+}
+
+.item:hover {
+    transform: translateY(-5px); /* Efecto de elevación al pasar el mouse */
+}
+
+.item img {
+    width: 150px; /* Asegura que la imagen sea cuadrada */
+    height: 150px;
+    border-radius: 50%; /* Hace la imagen circular */
+    object-fit: cover; /* Evita distorsión */
+}   
+
+.item p {
+    font-size: 14px;
+    margin: 10px 0;
+    color: #333;
+}
+
+.item button {
+    padding: 5% 10%;
+    background: rgb(163, 163, 163);
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-weight: bold;
+}
+
+.item button:hover {
+    background: black;
+}
+
+/* Pie de página */
+
+.footer-line {
+    width: 90%;
+    height: 5px;
+    background: #ccc;
+    border: none;
+    margin: 10px auto;
+}
+.footer-line-2{
+    width: 90%;
+    height: 5px;
+    background: #000000;
+    border: none;
+    margin: 10px auto;
+}
+/* Contenedor principal del footer */
+.footer-content {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 10%;
+    padding-right: 10%;
+    background: white;
+}
+/* Estilo del logo en el footer */
+.footer-content .logo img {
+    width: 120px; /* Ajusta el tamaño del logo */
+    padding-top: 10px;
+}
+/* Contenedor de redes sociales */
+.footer-content .social {
+    display: flex;
+    gap: 20px; /* Espaciado entre iconos */
+}
+/* Estilos para los íconos */
+.footer-content .social a {
+    color: black;
+    font-size: 20px;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+.footer-content .social a:hover {
+    color: gray; /* Efecto al pasar el mouse */
+}
+@media screen and (max-width: 600px) {
+    .popular-items {
+        flex-direction: column; /* Apila los elementos en una sola columna */
+        align-items: center;
+    }
+
+    .item {
+        width: 80%; /* Ajusta el ancho para pantallas pequeñas */
+        max-width: 300px;
+    }
+
+    .item img {
+        width: 120px; /* Reduce un poco el tamaño de las imágenes */
+        height: 120px;
+    }
+
+    .item button {
+        width: auto; /* Cambia de 100% a auto para evitar que sea muy ancho */
+        max-width: 150px; /* Limita el ancho máximo */
+        display: block;
+        margin: 10px auto; /* Centra el botón */
+    }
+    @media screen and (max-width: 600px) {
+    nav ul {
+        flex-direction: column; /* Hace el menú vertical */
+        align-items: center; /* Centra los elementos */
+        padding: 10px 0;
+    }
+
+    nav ul li {
+        width: 100%; /* Cada elemento ocupa todo el ancho */
+        border-right: none; /* Elimina las líneas verticales */
+        border-bottom: 1px solid #ddd; /* Agrega separación entre los elementos */
+    }
+
+    nav ul li:last-child {
+        border-bottom: none;
+    }
+
+    nav ul li a {
+        height: 45px; /* Ajusta la altura de los enlaces */
+        width: 100%; /* Ocupa todo el ancho disponible */
+        text-align: center;
+    }
+    
+    }
+    
+    
+}
